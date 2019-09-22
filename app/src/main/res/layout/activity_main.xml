@@ -3,6 +3,23 @@
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dropDownWidth="match_parent"
+            android:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+    </android.support.v7.widget.Toolbar>
 
     <TextView
         android:id="@+id/locationTV"
@@ -48,24 +65,27 @@
             <TextView android:padding="2sp" android:textSize="24sp" android:text="00:00" android:textColor="#ff8400" android:gravity="center" android:layout_height="wrap_content" android:id="@+id/sunsetTimeTV" android:layout_width="wrap_content"></TextView>
         </TableRow>
 
-
-
     </TableLayout>
 
-
-
-    <ImageView android:id="@+id/ImageView01" android:layout_width="match_parent"
-        android:src="@drawable/sunpic"
-        android:padding="4dp" android:layout_height="wrap_content"/>
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="4dp"
+        android:src="@drawable/sunpic" />
 
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="5sp"
+        android:layout_height="200dp"
         android:calendarViewShown="false"
-        android:datePickerMode="spinner"/>
+        android:datePickerMode="spinner"
+        android:gravity="center"
+        android:padding="5sp" />
 
+    <FrameLayout
+        android:id="@+id/timeTableFragment"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"></FrameLayout>
 
 </LinearLayout>
